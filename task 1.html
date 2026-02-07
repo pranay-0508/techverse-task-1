@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DevRush Replica</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+body{
+    background: radial-gradient(circle at top left, #0f1b2e, #060b18 60%);
+    color:white;
+    min-height:100vh;
+}
+nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:18px 40px;
+}
+nav h1{
+    font-size:18px;
+    font-weight:600;
+}
+.join-btn{
+    margin-left:15px;
+    padding:8px 18px;
+    border-radius:20px;
+    background: linear-gradient(90deg,#6a7cff,#2dd4ff);
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    cursor:pointer;
+}
+.hero{
+    height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+.hero-card{
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+    border-radius:16px;
+    padding:40px 60px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.4);
+}
+
+.hero-card h2{
+    font-size:34px;
+    margin-bottom:12px;
+}
+
+.hero-card p{
+    opacity:0.85;
+    font-size:15px;
+}
+
+/* STATS */
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    margin-top:-60px;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat h3{
+    font-size:28px;
+}
+
+.stat span{
+    font-size:13px;
+    opacity:0.7;
+}
+
+/* FEATURES */
+.features{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin:80px 0;
+}
+
+.card{
+    width:220px;
+    padding:25px;
+    border-radius:14px;
+    background:rgba(0,0,0,0.35);
+    box-shadow:0 10px 40px rgba(0,0,0,0.5);
+}
+
+.card.active{
+    background:linear-gradient(135deg,#6a7cff,#2dd4ff);
+}
+
+.card h4{
+    margin-bottom:8px;
+}
+
+.card p{
+    font-size:14px;
+    opacity:0.85;
+}
+.modules{
+    text-align:center;
+    margin-bottom:80px;
+}
+.modules h2{
+    margin-bottom:30px;
+}
+.module-grid{
+    display:grid;
+    grid-template-columns:repeat(3,220px);
+    gap:20px;
+    justify-content:center;
+}
+.module{
+    padding:22px;
+    border-radius:14px;
+    background:rgba(0,0,0,0.4);
+}
+.module.highlight{
+    background:linear-gradient(135deg,#6a7cff,#2dd4ff);
+}
+footer{
+    padding:25px 0;
+    text-align:center;
+    font-size:14px;
+    opacity:0.7;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+</style>
+</head>
+<body>
+<nav>
+    <h1>DevRush Build. Fix. Escape.</h1>
+    <a class="join-btn" onclick="joinNow()">Join Now</a>
+</nav>
+<section class="hero">
+    <div class="hero-card">
+        <h2>Build Under Pressure</h2>
+        <p>Speed, precision, and creativity decide the winner.</p>
+    </div>
+</section>
+<section class="stats">
+    <div class="stat">
+        <h3>15+</h3>
+        <span>Minutes</span>
+    </div>
+    <div class="stat">
+        <h3>30</h3>
+        <span>Points</span>
+    </div>
+    <div class="stat">
+        <h3>1</h3>
+        <span>Winner</span>
+    </div>
+</section>
+<section class="features">
+    <div class="card">
+        <h4>Precision</h4>
+        <p>Exact spacing and alignment.</p>
+    </div>
+    <div class="card active">
+        <h4>Speed</h4>
+        <p>Time works against you.</p>
+    </div>
+    <div class="card">
+        <h4>Focus</h4>
+        <p>No distractions allowed.</p>
+    </div>
+</section>
+<section class="modules" id="join">
+    <h2>Challenge Modules</h2>
+    <div class="module-grid">
+        <div class="module">Layout Replication</div>
+        <div class="module">CSS Styling</div>
+        <div class="module highlight">Glass UI</div>
+        <div class="module">Color Theory</div>
+        <div class="module">Spacing Logic</div>
+        <div class="module">Time Control</div>
+    </div>
+</section>
+<footer>
+    Built with ❤️ by <strong>@codecrafters</strong>
+</footer>
+<script>
+function joinNow(){
+    document.getElementById("join").scrollIntoView({
+        behavior:"smooth"
+    });
+    setTimeout(()=>{
+        alert("Welcome to DevRush 🚀 Challenge Accepted!");
+    },600);
+}
+</script>
+</body>
+</html>
